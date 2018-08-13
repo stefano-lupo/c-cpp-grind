@@ -196,18 +196,15 @@ void nestedIfAndElseIf() {
     }
 
   }
-
-
 }
-
 
 // What code runs when we run our program
 // Just a special function (called main) that returns an int
 int main() {
 
-  // cout << "1. Printing" << endl;
-  // basicPrinting();
-  // cout << endl << endl;
+  cout << "1. Printing" << endl;
+  basicPrinting();
+  cout << endl << endl;
 
   // cout << "2. Variables" << endl;
   // variables();
@@ -237,9 +234,9 @@ int main() {
   // combinedIf();
   // cout << endl << endl;
 
-  cout << "5c. Nested if and else if statements" << endl;
-  nestedIfAndElseIf();
-  cout << endl << endl;
+  // cout << "5c. Nested if and else if statements" << endl;
+  // nestedIfAndElseIf();
+  // cout << endl << endl;
 
   return 0;
 }
