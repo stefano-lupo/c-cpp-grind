@@ -1,9 +1,9 @@
 /**
- * Note:
+ * ************** File 1 - Baiscs of C++ ********************************************
  * Just pretend that all of these void functions are the main function of the program
  * Forgot about what the actual function parts mean and just look inside them
- * We will do functions in the next file
-**/
+ * We will do functions in another file
+ ***********************************************************************************/
 
 // Include all other peoples code that we need
 #include<iostream>
