@@ -67,28 +67,53 @@ int sumNumbersInArray(int array[], int numItemsInArray) {
 }
 
 
+
+
 int main() {
   
   // Calling function that returns something
-  int fiveSquared = computeSquareOfNumber(5);
+  // int fiveSquared = computeSquareOfNumber(5);
 
-  // Calling void function - it doesn't return anything
-  // So we cant store what it returns in a variable, so we dont need one
-  printTitleNumber(999);
+  // // Calling void function - it doesn't return anything
+  // // So we cant store what it returns in a variable, so we dont need one
+  // printTitleNumber(999);
 
-  // Calling function that calls other functions
-  // Note that the caller (which is the code that uses the function) doesn't
-  // know or care if the function it is calling calls other functions
-  int volume = computeVolumeOfCuboid(3, 4, 5);
-  printf("Volume of cuboid with sides 3, 4 and 5 is: %d\n", volume);
+  // // Calling function that calls other functions
+  // // Note that the caller (which is the code that uses the function) doesn't
+  // // know or care if the function it is calling calls other functions
+  // int volume = computeVolumeOfCuboid(3, 4, 5);
+  // printf("Volume of cuboid with sides 3, 4 and 5 is: %d\n", volume);
 
-  // Calling function that returns boolean
-  int numIsPositive = isNumberPositive(-1);
-  printf("-1 is positive? %d\n", numIsPositive);
+  // // Calling function that returns boolean
+  // int numIsPositive = isNumberPositive(-1);
+  // printf("-1 is positive? %d\n", numIsPositive);
 
   int arrayOfNumbers[5] = {1, 2, 3, 4, 5};
+  int thirdValue = arrayOfNumbers[2];
+
+  
+  int* addressOfThirdValue = &thirdValue;
+
+  printf("Starting value %p\n", arrayOfNumbers);
+  printf("%p --> %d\n", addressOfThirdValue, thirdValue);
+
+  /*
+   0 (0x0) -
+    1
+   32 (0x20) -
+    2
+   64 (0x40) -
+    3
+    -
+    4
+    -
+    5
+
+  */
+
+
   int sumOfArrayOfNumbers = sumNumbersInArray(arrayOfNumbers, 5);
-  printf("The sum of the numbers from 1 to 5 is: %d\n", sumOfArrayOfNumbers);
+  // printf("The sum of the numbers from 1 to 5 is: %d\n", sumOfArrayOfNumbers);
 
   return 0;
 }

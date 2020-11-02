@@ -9,12 +9,14 @@ void functionsGetOwnCopiesByDefault(int someNumber) {
 }
 
 void getKidRolercosterInfo(int* age, float* heightInM, int* isCrying, int* isOwnerOfParksKid) {
+  printf("Age: %p\n", age);
+
   printf("Setting age to 99\n");
   *age = 99;
 
   
-  // printf("Setting heightInM to 3.5m\n");
-  // *heightInM = 3.5;
+  printf("Setting heightInM to 3.5m\n");
+  *heightInM = 3.5;
 
   printf("Setting isCrying to 1\n");
   *isCrying = 1;
@@ -25,18 +27,20 @@ void getKidRolercosterInfo(int* age, float* heightInM, int* isCrying, int* isOwn
 
 int main() {
 
-  printf("1: Functions get their own copy of variables by default\n");
-  int someNumber = 0;
-  printf("someNumber before calling function is: %d\n", someNumber);
-  functionsGetOwnCopiesByDefault(someNumber);
-  printf("someNumber after calling function is: %d\n", someNumber);
-  printf("\n\n");
+  // Pass by value
+  // printf("1: Functions get their own copy of variables by default\n");
+  // int x = 0;
+  // printf("x before calling function is: %d\n", x);
+  // functionsGetOwnCopiesByDefault(x);
+  // printf("x after calling function is: %d\n", x);
+  // printf("\n\n");
 
   // How to use references to variables to set values in void functions
   int age = 5;
   float heightInM = 1.2;
   int isCrying = 0;
   int isOwnerOfParksKid = 0;
+  char c = 'a';
 
   printf("2: Passing by reference to functions changes their underlying values\n");
   printf("The address of age is %p\n", &age);

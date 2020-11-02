@@ -17,7 +17,7 @@ void basicPrinting() {
 // 2. Variables
 void variables() {
   int age = 23;
-  double heightInMetres = 1.75;
+  float heightInMetres = 1.75;
   
   printf("Below is some info about me: \n");
   printf("The person is %d years old and %fm tall\n", age, heightInMetres);
@@ -29,6 +29,8 @@ void variables() {
 // The user could sit here forever typing 1
 void whileLoops() {
   int keepRunning = 1;
+
+
 
   while (keepRunning == 1) {
     printf("Running...\n");
@@ -60,7 +62,7 @@ void withForLoop() {
   // We can then just repeatedly change the value of that variable and
   // run the same line of code a bunch of times inside of the loop
 
-  int currentNumber = 1; // Use int as we are dealing with numbers
+
   for (int currentNumber = 1; currentNumber <= 5; currentNumber++) {
     printf("Current number is: %d\n",currentNumber);
   }
@@ -121,14 +123,17 @@ void ifStatements() {
 
   if (age > 10) {
     printf("They're allowed since they're old enough\n");
+    return;
   }
 
   if (age > 8 && heightInM > 1.2) {
     printf("They're allowed since they're big enough\n");
+    return;
   }
 
   if (isOwnerOfParksKid || isCrying) {
     printf("Letting them in anyway\n");
+    return;
   }
 
   // Note this code always prints not letting them in - see else statements section.
@@ -215,9 +220,9 @@ int main() {
   // variables();
   // printf("\n");
 
-  // printf("3. while loops\n");
-  // whileLoops();
-  // printf("\n");
+  printf("3. while loops\n");
+  whileLoops();
+  printf("\n");
 
   // printf("4a. Without for loops\n");
   // withoutForLoop();
@@ -239,9 +244,9 @@ int main() {
   // combinedIf();
   // printf("\n");
 
-  printf("5c. Nested if and else if statements\n");
-  nestedIfAndElseIf();
-  printf("\n");
+  // printf("5c. Nested if and else if statements\n");
+  // nestedIfAndElseIf();
+  // printf("\n");
 
   return 0;
 }
